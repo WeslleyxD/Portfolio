@@ -25,18 +25,21 @@ export default function App({ repo }) {
   const aboutRef = useRef(null);
   const tecnologiesRef = useRef(null);
   const experiencesRef = useRef(null);
-  const projectsRef = useRef(null);
   const certifiedsRef = useRef(null);
+  const projectsRef = useRef(null);
   const [menuSelect, setMenuSelect] = useState("SOBRE");
 
   const handleScroll = useCallback(() => {
     if (aboutRef != null && tecnologiesRef != null && experiencesRef != null && projectsRef != null) {
       const windowTop = window.scrollY + 100
+      const windowBot = window.scrollX + 100
 
       const aboutPositionBottom = aboutRef.current.offsetTop + aboutRef.current.offsetHeight
       const tecnologiesPositionBottom = tecnologiesRef.current.offsetTop + tecnologiesRef.current.offsetHeight
       const experiencesPositionBottom = experiencesRef.current.offsetTop + experiencesRef.current.offsetHeight
-      const certifiedsPositionBottom = certifiedsRef.current.offsetTop + certifiedsRef.current.offsetHeight
+      const certifiedsPositionBottom = certifiedsRef.current.offsetTop
+
+      const projectsPositionBottom = projectsRef.current.offsetTop + projectsRef.current.offsetHeight
 
       let menuActive = "";
       if (aboutPositionBottom > windowTop) {
@@ -47,6 +50,8 @@ export default function App({ repo }) {
         menuActive = "EXPERIÊNCIAS";
       } else if (certifiedsPositionBottom > windowTop) {
         menuActive = "CERTIFICADOS";
+      } else if (projectsPositionBottom > windowBot) {
+        menuActive = "PROJETOS";
       } else {
         menuActive = "PROJETOS";
       }
@@ -118,7 +123,7 @@ export default function App({ repo }) {
                   <Image src="/linux.svg" alt="jira" width="64" height="64" title="Linux" />
                 </div>
                 <div>
-                  <Image src="/aws.svg" alt="aws" width="64" height="64" title="Amazon Web Service"/>
+                  <Image src="/aws.svg" alt="aws" width="64" height="64" title="Amazon Web Service" />
                   <Image src="/lambda.svg" alt="lambda" width="64" height="64" title="Lambda" />
                   <Image src="/ecr.svg" alt="ecr" width="64" height="64" title="Elastic Container Registry" />
                   <Image src="/sam.svg" alt="sam" width="64" height="64" title="Serverless Application Model" />
@@ -136,20 +141,24 @@ export default function App({ repo }) {
                 </div>
               </div>
               <div ref={experiencesRef} id="experiences" className={styles.experiences}>
-                <CardExp href="/" time="2023-Atual" seniority="Júnior" title="Desenvolvedor back-end" company="Power2Go" brands={["Python", "Golang", "Javascript", "Django", "Docker", "AWS", "Lambda", "SAM", "CloudFormation", "S3", "Appsync", "APIGateway", "SDK", "IAM", "EventBridge", "SQS", "CloudWatch"]} description="Tenho uma sólida experiência na concepção e implementação de aplicações serverless altamente escaláveis e seguras na Amazon Web Services (AWS). Especializo-me na arquitetura de microsserviços desacoplados, destacando-me na criação, manutenção e otimização contínua desses microsserviços, com ênfase especial na implementação de padrões avançados de mensageria. Além disso, possuo expertise no deployment de serviços em Django através de contêineres Docker na infraestrutura da AWS, proporcionando soluções tecnológicas inovadoras e eficientes para ambientes de produção."/>
-                <CardExp href="/" time="2022-2023" seniority="Estágio" title="Desenvolvedor back-end" company="Power2Go" brands={["AWS", "Lambda", "SAM", "CloudFormation","Appsync", "SDK", "EventBridge", "CloudWatch", "S3"]} description="Construindo experiência sólida na concepção serverless utilizando uma arquitetura de microsserviços.Criação de scripts de migração, facilitando a refatoração eficiente de microsserviços para melhorias contínuas. Além disso, sou em aprendizado na integração perfeita com os recursos da Amazon Web Services (AWS), garantindo a otimização e eficácia operacional das soluções tecnológicas aplicadas."/>
+                <CardExp href="/" time="2023-Atual" seniority="Júnior" title="Desenvolvedor back-end" company="Power2Go" brands={["Python", "Golang", "Javascript", "Django", "Docker", "AWS", "Lambda", "SAM", "CloudFormation", "S3", "Appsync", "APIGateway", "SDK", "IAM", "EventBridge", "SQS", "CloudWatch"]} description="Tenho uma sólida experiência na concepção e implementação de aplicações serverless altamente escaláveis e seguras na Amazon Web Services (AWS). Especializo-me na arquitetura de microsserviços desacoplados, destacando-me na criação, manutenção e otimização contínua desses microsserviços, com ênfase especial na implementação de padrões avançados de mensageria. Além disso, possuo expertise no deployment de serviços em Django através de contêineres Docker na infraestrutura da AWS, proporcionando soluções tecnológicas inovadoras e eficientes para ambientes de produção." />
+                <CardExp href="/" time="2022-2023" seniority="Estágio" title="Desenvolvedor back-end" company="Power2Go" brands={["AWS", "Lambda", "SAM", "CloudFormation", "Appsync", "SDK", "EventBridge", "CloudWatch", "S3"]} description="Construindo experiência sólida na concepção serverless utilizando uma arquitetura de microsserviços.Criação de scripts de migração, facilitando a refatoração eficiente de microsserviços para melhorias contínuas. Além disso, sou em aprendizado na integração perfeita com os recursos da Amazon Web Services (AWS), garantindo a otimização e eficácia operacional das soluções tecnológicas aplicadas." />
               </div>
 
               <div ref={certifiedsRef} id='certifieds' className={styles.experiences}>
-                <CardExp href="https://www.credly.com/badges/f8440e00-bd35-4e65-a64e-c1645889d0fb/linked_in_profile" target="_blank" time="08/2023" title="Cloud Practitioner" company="Amazon Web Service (AWS)" brands={["AWS"]} description="Compreenção de infraestrutura básica global, conceitos de faturamento, gerenciamento de contas e definição de preço, boas práticas de segurança, recursos e custos, concepção de redes e conectividade, escalabilidade."/>
-                <CardExp href="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=5d9f478b44c732b4e64556ec767d8d3b&action=view" target="_blank" time="06/2023" title="Python Fundamentos" company="FIAP" brands={["Python"]} description="Conceitos fundamentais de Python. Funções, classes, orientação a objetos, métodos especiais (Dunders), compreensões de lista e dicionários, expressões lambda, operações ternárias, decoradores, tratamento de exceções, uso de módulos e pacotes."/>
-                <CardExp href="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=dbc09b04ba13b0a9d5054e03a593268b&action=view" target="_blank" time="06/2023" title="Linux Fundamentos" company="FIAP" brands={["Linux"]} description="Estrutura do sistema operacional, linha de comando para manipulação de arquivos, diretórios e processos, gerenciamento de pacotes, segurança e permissões."/>
+                <CardExp href="https://www.credly.com/badges/f8440e00-bd35-4e65-a64e-c1645889d0fb/linked_in_profile" target="_blank" time="08/2023" title="Cloud Practitioner" company="Amazon Web Service (AWS)" brands={["AWS"]} description="Compreenção de infraestrutura básica global, conceitos de faturamento, gerenciamento de contas e definição de preço, boas práticas de segurança, recursos e custos, concepção de redes e conectividade, escalabilidade." />
+                <CardExp href="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=5d9f478b44c732b4e64556ec767d8d3b&action=view" target="_blank" time="06/2023" title="Python Fundamentos" company="FIAP" brands={["Python"]} description="Conceitos fundamentais de Python. Funções, classes, orientação a objetos, métodos especiais (Dunders), compreensões de lista e dicionários, expressões lambda, operações ternárias, decoradores, tratamento de exceções, uso de módulos e pacotes." />
+                <CardExp href="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=dbc09b04ba13b0a9d5054e03a593268b&action=view" target="_blank" time="06/2023" title="Linux Fundamentos" company="FIAP" brands={["Linux"]} description="Estrutura do sistema operacional, linha de comando para manipulação de arquivos, diretórios e processos, gerenciamento de pacotes, segurança e permissões." />
               </div>
 
 
-              <div ref={projectsRef} id='projects' className={styles.projects}>
+              <div ref={projectsRef} id='projects' className={styles.projects} data-aos="fade-up" data-aos-delay="400">
                 <Projects />
               </div>
+
+              <footer style={{ marginTop: "5rem" }}>
+                <p>&copy; 2023 Weslley Araújo | Nenhum direito reservado.</p>
+              </footer>
             </aside>
             {/* <Login /> */}
 

@@ -59,6 +59,10 @@
     width: 12rem;
 }
 
+.video img {
+    cursor: pointer;
+}
+
 .right h4 {
     margin-top: 1rem;
     margin-bottom: 2rem;

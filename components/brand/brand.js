@@ -11,7 +11,7 @@ export default function Brand({ name }) {
     return (
       <>
         {name
-          .filter(item => item !== "full-stack" && item !== "back-end") // Filtra os itens "full-stack" e "back-end"
+          .filter(item => item !== "full-stack" && item !== "back-end" && item !== "front-end") // Filtra os itens "full-stack" e "back-end"
           .map((item, index) => (
             <span key={index} className={styles.brand}>
               {formatString(item)}

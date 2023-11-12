@@ -35,7 +35,7 @@ const fetchReadme = async (repoName) => {
     const conteudoBase64 = data.content;
     const conteudo = atob(conteudoBase64);
 
-    const regex = /https?:\/\/[^\s]+\.mp4/g;
+    const regex = /https?:\/\/[^\s]+\.mp4|https?:\/\/[^\s]+\.png/g;
     const match = conteudo.match(regex);
 
     return match ? match[0] : null;
@@ -60,8 +60,6 @@ const Block = ({ currentblock }) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [videoUrl, setVideoUrl] = useState(null);
-
-  console.log(data)
 
   const asyncFunction = useCallback(async () => {
     try {
@@ -111,12 +109,17 @@ const Block = ({ currentblock }) => {
                     <div className={styles.video}>
                       {videoUrl &&
                         videoUrl[index] &&
-                        videoUrl[index].videoUrl && (
-                          <video controls style={{ width: '100%' }}>
-                            <source src={videoUrl[index].videoUrl} type="video/mp4" />
-                            Seu navegador não suporta o elemento de vídeo.
-                          </video>
-                        )}
+                        videoUrl[index].videoUrl.includes("mp4") ? (
+                        <video controls style={{ width: '100%' }}>
+                          <source src={videoUrl[index].videoUrl} type="video/mp4" />
+                          Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                      ) :
+                        <Link href={videoUrl[index].videoUrl} target='_blank'>
+                          <img src={videoUrl[index].videoUrl} alt="Imagem" target="_blank" style={{ width: '100%' }} />
+                        </Link>
+                      }
+
                     </div>
                     <div className={styles.urls}>
                       <div className={styles.row}>
