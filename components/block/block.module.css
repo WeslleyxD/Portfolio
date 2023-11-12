@@ -15,11 +15,6 @@
     animation: rotation 1s linear infinite;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-}
-
 .container h2 {
     font-size: 1.2rem;
 }
