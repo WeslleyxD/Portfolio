@@ -1,10 +1,17 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+.animations {
+  position: relative;
+  left: 50px;
+  animation: teste 10s forwards;
+}
+
+@keyframes teste {
+  0% {opacity: 0; background-color: red;}
+  100% {opacity: 1; background-color: green; left: 0px;}
+}
+
+
+.kaka {
+  background-color: red;
 }
 
 .description {
@@ -107,6 +114,113 @@
 .logo {
   position: relative;
 }
+
+.header {
+  display: flex;
+  padding: 5px;
+  top: 0;
+  flex-direction: column;
+  padding: 6rem 0px;
+  position: sticky;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header span {
+margin-right: 8px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
+}
+
+.options a:hover {
+  left: 20px;
+  color: var(--main);
+}
+
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+/* @keyframes animation {
+  0% {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 100%;}
+} */
+
+.active {
+  background-color: red;
+  color: red;
+}
+
+.main {
+  padding: 6rem 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.main p {
+  width: 100%;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about span {
+  color: var(--green);
+}
+
+.technologies {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.technologies img {
+  margin: 0px 5px;
+}
+
+.main .active {
+  background-color: red;
+  color: red;
+}
+
+.active {
+  background-color: red;
+  color: red;
+}
+
+.experiences {
+  display: flex;
+  flex-direction: column;
+}
+
+.experiences .container {
+  display: flex;
+  box-shadow: lightpink;
+  border-radius: 5px;
+  transition: all 0.2 ease;
+}
+
+.experiences .container:hover {
+  background-color: rgba(148,163,184,0.1)
+}
+
+.about a {
+  text-decoration: underline;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -202,6 +316,14 @@
   }
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+  min-height: 20rem;
+}
+
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
@@ -227,3 +349,4 @@
     transform: rotate(0deg);
   }
 }
+

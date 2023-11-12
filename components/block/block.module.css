@@ -1,0 +1,112 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid var(--green);
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container h2 {
+    font-size: 1.2rem;
+}
+
+.container h3 {
+    font-size: 0.9rem;
+    color: var(--link);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+.child {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.child:hover {
+    background-color: var(--card);
+}
+
+.left {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.video {
+    width: 12rem;
+}
+
+.right h4 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: .875rem;
+    color: var(--paragraph);
+    line-height: 1.353;
+    letter-spacing: 1.1px;
+    font-weight: normal;
+}
+
+.right .brand {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+}
+
+.urls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.urls svg {
+    transition: transform 0.3s ease;
+    height: 25px;
+    width: 25px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.row:hover a {
+    color: var(--green);
+}
+
+.row:hover svg {
+    transform: translate(5px, -5px);
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 

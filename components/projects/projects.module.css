@@ -1,0 +1,23 @@
+.content {
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--card);
+}
+
+.header div {
+    cursor: pointer;
+}
+
+.header p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.header .active p {
+    color: var(--green);
+}

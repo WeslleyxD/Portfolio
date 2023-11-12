@@ -1,0 +1,23 @@
+.preloader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    color: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: loader 5s ease;
+    opacity: 0;
+}
+
+@keyframes loader {
+    0% {opacity: 0; transform: scale(0.5); opacity: 0;}
+    75% {opacity: 0.75; transform: scale(1.5); opacity: 1;}
+    100% {opacity: 0; transform: scale(0); opacity: 0;}
+}
