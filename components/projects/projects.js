@@ -16,6 +16,10 @@ const Projects = () => {
     setCurrentBlock("full-stack");
   };
 
+  const handleClickBlock3 = () => {
+    setCurrentBlock("front-end");
+  };
+
   return (
     <div className={styles.content}>
       <div className={styles.header}>
@@ -24,6 +28,9 @@ const Projects = () => {
         </div>
         <div onClick={handleClickBlock2} className={`${currentBlock === 'full-stack' ? styles.active : ''}`}>
           <p>FULL-STACK</p>
+        </div>
+        <div onClick={handleClickBlock3} className={`${currentBlock === 'front-end' ? styles.active : ''}`}>
+          <p>FRONT-END</p>
         </div>
       </div>
         <Block currentblock={currentBlock} style={{ border: '1px solid #ccc', padding: '10px', borderRadius: '5px', backgroundColor: '#f0f0f0' }}/>
