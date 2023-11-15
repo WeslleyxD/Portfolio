@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem;
+}
+
+.content {
+  width: 1280px;
+}
+
+.return svg {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.return:hover svg {
+  transform: rotate(180deg) translateX(10px);
+}
+
+.return {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.error {
+  margin: 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
