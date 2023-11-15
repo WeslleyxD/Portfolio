@@ -38,8 +38,26 @@
 }
 
 @media (max-width: 1174px) {
-  /* font-size: 2.25rem */
+  .container {
+    padding-top: 4rem;
+  }
+
   .content h1 {
     font-size: 1.25rem
+  }
+
+  .content {
+    padding: 0px 4rem;
+  }
+}
+
+
+@media (max-width: 469px) {
+  .container {
+    padding-top: 2rem;
+  }
+
+  .content {
+    padding: 0px 2rem;
   }
 }
