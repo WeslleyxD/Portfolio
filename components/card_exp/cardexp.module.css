@@ -46,8 +46,6 @@
 
 .right .title svg {
     transition: transform 0.3s ease;
-    height: 25px;
-    width: 25px;
 }
 
 .right h4 {

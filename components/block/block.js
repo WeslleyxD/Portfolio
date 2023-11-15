@@ -7,8 +7,8 @@ const fetchData = async (currentblock) => {
   const token = process.env.GITHUB_TOKEN;
 
   try {
-    const resp = await fetch(`https://api.github.com/search/repositories?q=user:weslleyxd topic:${currentblock}`, { headers: { Authorization: `Bearer ${token}` } });
-
+    const resp = await fetch(`https://api.github.com/search/repositories?q=user:weslleyxd topic:${currentblock}&per_page=2`, { headers: { Authorization: `Bearer ${token}` } });
+    
     if (!resp.ok) {
       throw new Error(`Erro na requisição: ${resp.status} - ${resp.statusText}`);
     }

@@ -18,7 +18,7 @@ import 'aos/dist/aos.css'
 
 
 
-export default function App({ repo }) {
+export default function App() {
 
   const [loading, setLoading] = useState(true);
 
@@ -30,7 +30,7 @@ export default function App({ repo }) {
   const [menuSelect, setMenuSelect] = useState("SOBRE");
 
   const handleScroll = useCallback(() => {
-    if (aboutRef != null && tecnologiesRef != null && experiencesRef != null && projectsRef != null) {
+    if (aboutRef.current != null && tecnologiesRef.current != null && experiencesRef.current != null && projectsRef.current != null) {
       const windowTop = window.scrollY + 100
       const windowBot = window.scrollX + 100
 
@@ -67,7 +67,7 @@ export default function App({ repo }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [handleScroll]);
+  }, []);
 
 
   const handleStateChange = () => {
@@ -154,7 +154,9 @@ export default function App({ repo }) {
 
               <div ref={projectsRef} id='projects' className={styles.projects} data-aos="fade-up" data-aos-delay="400">
                 <Projects />
+                <Link href={"/projects"} className={styles.archives}>Veja todos os projetos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none" aria-hidden="true"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd"></path></svg></Link>
               </div>
+              
 
               <footer style={{ marginTop: "5rem" }}>
                 <p>&copy; 2023 Weslley Araújo | Nenhum direito reservado.</p>
