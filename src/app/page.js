@@ -128,7 +128,8 @@ export default function App() {
                 </div>
                 <div className={styles.images}>
                   <Image src="/python.svg" alt="python" width="64" height="64" title="Python" />
-                  <Image src="/drf.png" alt="drf" width="220" height="64" title="Django and DRF" />
+                  <Image src="/drfff.png" alt="drf" width="64" height="64" title="Djangorest-framework" />
+                  <Image src="/django.svg" alt="drf" width="64" height="64" title="Django" />
                   <Image src="/html5.svg" alt="html5" width="64" height="64" title="Html" />
                   <Image src="/css3.svg" alt="css3" width="64" height="64" title="Css" />
                   <Image src="/javascript.svg" alt="mjavascripte" width="64" height="64" title="Javascript" />
