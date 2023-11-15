@@ -130,3 +130,9 @@ td:last-child {
 td:nth-child(2) {
   color: var(--main);
 }
+
+@media (max-width: 1174px) {
+  th:nth-child(3), td:nth-child(3) {
+    display: none;
+  }
+}
