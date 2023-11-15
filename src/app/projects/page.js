@@ -27,7 +27,7 @@ async function getAllProjects() {
 
   const token = process.env.GITHUB_TOKEN;
   try {
-    const resp = await fetch(`https://api.github.com/search/repositories?q=user:weslleyxd`, { cache: 'force-cache' }, { headers: { Authorization: `Bearer ${token}` } });
+    const resp = await fetch(`https://api.github.com/search/repositories?q=user:weslleyxd`, { cache: 'force-cache' }, { next: { revalidate: 3600 } }, { headers: { Authorization: `Bearer ${token}` } });
 
     if (!resp.ok) {
       return { "error": "Erro na requisição de todos os projetos, estamos trabalhando para consertar." }
