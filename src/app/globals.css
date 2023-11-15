@@ -107,7 +107,7 @@ td {
 }
 
 th:first-child,
-th:nth-child(4) {
+th:last-child {
   width: 8%;
 }
 
@@ -123,7 +123,7 @@ th {
 }
 
 td:first-child,
-td:nth-child(4) {
+td:last-child {
   color: var(--link);
 }
 
