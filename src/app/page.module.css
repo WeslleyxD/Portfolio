@@ -136,6 +136,11 @@
   gap: 20px;
 }
 
+.header svg {
+  width: 50px;
+  height: 50px;
+}
+
 .header span {
   margin-right: 8px;
 }
