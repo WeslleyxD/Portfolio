@@ -83,11 +83,11 @@ export default function App() {
         ) : (
           <section>
             <header className={styles.header}>
-              <div>
-                <h1 data-aos="fade-up" data-aos-delay="100" >Weslley Araújo</h1>
-                <h2 data-aos="fade-up" data-aos-delay="400" >Full-stack Developer</h2>
+              <div data-aos="fade-up" data-aos-delay="400">
+                <h1>Weslley Araújo</h1>
+                <h2>Full-stack Developer</h2>
               </div>
-              <ul className={styles.options} data-aos="fade-up" data-aos-delay="700">
+              <ul className={styles.options} data-aos="fade-up" data-aos-delay="400">
                 <Anchor href="#about" title="SOBRE" menu={menuSelect} />
                 <Anchor href="#technologies" title="TECNOLOGIAS" menu={menuSelect} />
                 <Anchor href="#experiences" title="EXPERIÊNCIAS" menu={menuSelect} />
@@ -110,17 +110,23 @@ export default function App() {
               </div>
             </header>
             <aside className={styles.main}>
-              <div ref={aboutRef} id="about" className={styles.about}>
-                <p data-aos="fade-up" data-aos-delay="100">
+              <div ref={aboutRef} id="about" className={styles.about} data-aos="fade-up" data-aos-delay="700">
+                <div className={styles.hidden}>
+                  <span>#</span><p>SOBRE</p>
+                </div>
+                <p>
                   <span>Saudações!</span> Sou um desenvolvedor apaixonado por tecnologia, nascido em Recife e atualmente resido em São Paulo. Minha jornada começou quando decidi expandir meus conhecimentos e explorar o mundo das tecnologias em uma cidade vibrante como São Paulo.
                 </p>
-                <p data-aos="fade-up" data-aos-delay="400">
+                <p>
                   Meu diferencial é construir aplicações <span>serverless</span> seguindo à risca os <Link href="https://aws.amazon.com/blogs/compute/applying-the-twelve-factor-app-methodology-to-serverless-applications/" target='_blank' textDecoration="inderline"><span>os 12 fatores serverless</span></Link> em arquitetura de <span>microsserviços</span>. Além disso, atuo também em construções de aplicações <span>monolito</span>. E o mais importante, fanático em estudar e aperfeiçoar meus conhecimentos conforme as tecnologias mais recentes.
                 </p>
               </div>
 
               <div ref={tecnologiesRef} className={styles.technologies} id="technologies" data-aos="fade-up" data-aos-delay="700">
-                <div>
+                <div className={styles.hidden}>
+                  <span>#</span><p>TECNOLOGIAS</p>
+                </div>
+                <div className={styles.images}>
                   <Image src="/python.svg" alt="python" width="64" height="64" title="Python" />
                   <Image src="/drf.png" alt="drf" width="220" height="64" title="Django and DRF" />
                   <Image src="/html5.svg" alt="html5" width="64" height="64" title="Html" />
@@ -131,7 +137,7 @@ export default function App() {
                   <Image src="/jira.svg" alt="jira" width="64" height="64" title="Jira" />
                   <Image src="/linux.svg" alt="jira" width="64" height="64" title="Linux" />
                 </div>
-                <div>
+                <div className={styles.images}>
                   <Image src="/aws.svg" alt="aws" width="64" height="64" title="Amazon Web Service" />
                   <Image src="/lambda.svg" alt="lambda" width="64" height="64" title="Lambda" />
                   <Image src="/ecr.svg" alt="ecr" width="64" height="64" title="Elastic Container Registry" />
@@ -149,25 +155,34 @@ export default function App() {
                   <Image src="/iam.svg" alt="apprunner" width="64" height="64" title="Identity and Access Management" />
                 </div>
               </div>
-              <div ref={experiencesRef} id="experiences" className={styles.experiences}>
+              <div ref={experiencesRef} id="experiences" className={styles.experiences} data-aos="fade-up" data-aos-delay="700">
+                <div className={styles.hidden}>
+                  <span>#</span><p>EXPERIÊNCIAS</p>
+                </div>
                 <CardExp href="/" time="2023-Atual" seniority="Júnior" title="Desenvolvedor back-end" company="Power2Go" brands={["Python", "Golang", "Javascript", "Django", "Docker", "AWS", "Lambda", "SAM", "CloudFormation", "S3", "Appsync", "APIGateway", "SDK", "IAM", "EventBridge", "SQS", "CloudWatch", "DynamoDB"]} description="Tenho uma sólida experiência na concepção e implementação de aplicações serverless altamente escaláveis e seguras na Amazon Web Services (AWS). Especializo-me na arquitetura de microsserviços desacoplados, destacando-me na criação, manutenção e otimização contínua desses microsserviços, com ênfase especial na implementação de padrões avançados de mensageria. Além disso, possuo expertise no deployment de serviços em Django através de contêineres Docker na infraestrutura da AWS, proporcionando soluções tecnológicas inovadoras e eficientes para ambientes de produção." />
                 <CardExp href="/" time="2022-2023" seniority="Estágio" title="Desenvolvedor back-end" company="Power2Go" brands={["AWS", "Lambda", "SAM", "CloudFormation", "Appsync", "SDK", "EventBridge", "CloudWatch", "S3"]} description="Construindo experiência sólida na concepção serverless utilizando uma arquitetura de microsserviços.Criação de scripts de migração, facilitando a refatoração eficiente de microsserviços para melhorias contínuas. Além disso, sou em aprendizado na integração perfeita com os recursos da Amazon Web Services (AWS), garantindo a otimização e eficácia operacional das soluções tecnológicas aplicadas." />
               </div>
 
-              <div ref={certifiedsRef} id='certifieds' className={styles.experiences}>
+              <div ref={certifiedsRef} id='certifieds' className={styles.experiences} data-aos="fade-up" data-aos-delay="700">
+                <div className={styles.hidden}>
+                  <span>#</span><p>CERTIFICADOS</p>
+                </div>
                 <CardExp href="https://www.credly.com/badges/f8440e00-bd35-4e65-a64e-c1645889d0fb/linked_in_profile" target="_blank" time="08/2023" title="Cloud Practitioner" company="Amazon Web Service (AWS)" brands={["AWS"]} description="Compreenção de infraestrutura básica global, conceitos de faturamento, gerenciamento de contas e definição de preço, boas práticas de segurança, recursos e custos, concepção de redes e conectividade, escalabilidade." />
                 <CardExp href="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=5d9f478b44c732b4e64556ec767d8d3b&action=view" target="_blank" time="06/2023" title="Python Fundamentos" company="FIAP" brands={["Python"]} description="Conceitos fundamentais de Python. Funções, classes, orientação a objetos, métodos especiais (Dunders), compreensões de lista e dicionários, expressões lambda, operações ternárias, decoradores, tratamento de exceções, uso de módulos e pacotes." />
                 <CardExp href="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=dbc09b04ba13b0a9d5054e03a593268b&action=view" target="_blank" time="06/2023" title="Linux Fundamentos" company="FIAP" brands={["Linux"]} description="Estrutura do sistema operacional, linha de comando para manipulação de arquivos, diretórios e processos, gerenciamento de pacotes, segurança e permissões." />
               </div>
 
 
-              <div ref={projectsRef} id='projects' className={styles.projects} data-aos="fade-up" data-aos-delay="400">
+              <div ref={projectsRef} id='projects' className={styles.projects} data-aos="fade-up" data-aos-delay="700">
+                <div className={styles.hidden}>
+                  <span>#</span><p>PROJETOS</p>
+                </div>
                 <Projects />
                 <Link href={"/projects"} className={styles.archives}>Veja todos os projetos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd"></path></svg></Link>
               </div>
 
 
-              <footer style={{ marginTop: "5rem" }}>
+              <footer style={{ marginTop: "5rem", textAlign: "center"}} data-aos="fade-up" data-aos-delay="700">
                 <p>&copy; 2023 Weslley Araújo | Nenhum direito reservado.</p>
               </footer>
             </aside>

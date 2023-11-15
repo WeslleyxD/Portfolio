@@ -63,3 +63,9 @@
     flex-wrap: wrap;
     gap: 5px 10px;
 }
+
+@media (max-width: 800px) {
+    .left {
+        display: none;
+    }
+}

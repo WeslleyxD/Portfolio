@@ -132,13 +132,34 @@ td:nth-child(2) {
 }
 
 @media (max-width: 1174px) {
-  th:nth-child(3), td:nth-child(3) {
+
+  th:nth-child(3),
+  td:nth-child(3) {
     display: none;
   }
 }
 
+@media (max-width: 1024px) {
+  .header {
+    position: none;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 523px) {
-  th:first-child, td:first-child {
+
+  th:first-child,
+  td:first-child {
     display: none;
+  }
+}
+
+@media (max-width: 469px) {
+  section {
+    width: 90%;
   }
 }
