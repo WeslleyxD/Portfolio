@@ -45,7 +45,6 @@ export default async function Projects() {
 
   if (data.items) {
     const arrayDesc = [...data.items].sort(sortedData);
-    console.log(arrayDesc)
     data = arrayDesc
   }
 

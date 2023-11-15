@@ -136,3 +136,9 @@ td:nth-child(2) {
     display: none;
   }
 }
+
+@media (max-width: 523px) {
+  th:first-child, td:first-child {
+    display: none;
+  }
+}
