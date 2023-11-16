@@ -51,9 +51,7 @@ export default function App() {
         menuActive = "CERTIFICADOS";
       } else if (projectsPositionTop > (windowTop + 1000)) {
         menuActive = "PROJETOS";
-        console.log("aqui");
       } else {
-        console.log("ali");
         menuActive = "PROJETOS";
       }
 
