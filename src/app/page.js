@@ -2,21 +2,16 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-
 import Image from 'next/image'
 import styles from './page.module.css'
-
 
 import Preloader from '../../components/preloader/preloader';
 import Anchor from '../../components/anchor/anchor';
 import CardExp from '../../components/card_exp/cardExp'
 import Projects from '../../components/projects/projects';
 
-
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-
-
 
 export default function App() {
 
