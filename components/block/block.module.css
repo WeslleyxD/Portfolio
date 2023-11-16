@@ -89,15 +89,16 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .row:hover a {
     color: var(--green);
 }
-
+/* 
 .row:hover svg {
     transform: translate(5px, -5px);
-}
+} */
 
 @keyframes rotation {
     0% {
