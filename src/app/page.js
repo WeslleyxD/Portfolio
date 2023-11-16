@@ -174,7 +174,7 @@ export default function App() {
               </div>
 
 
-              <div ref={projectsRef} id='projects' className={styles.projects} data-aos="fade-up" data-aos-delay="700">
+              <div ref={projectsRef} id='projects' className={styles.projects} data-aos="fade-up" data-aos-delay="400">
                 <div className={styles.hidden}>
                   <span>#</span><p>PROJETOS</p>
                 </div>
@@ -183,7 +183,7 @@ export default function App() {
               </div>
 
 
-              <footer style={{ marginTop: "5rem", textAlign: "center"}} data-aos="fade-up" data-aos-delay="700">
+              <footer style={{ marginTop: "5rem", textAlign: "center"}} data-aos="fade-up" data-aos-delay="300">
                 <p>&copy; 2023 Weslley Araújo | Nenhum direito reservado.</p>
               </footer>
             </aside>

@@ -232,8 +232,8 @@
 }
 
 .projects {
-  padding: 1rem;
-  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .archives {
@@ -259,6 +259,10 @@
 @media (max-width: 1174px) {
   .content h1 {
     font-size: 1.25rem
+  }
+
+  .main {
+    gap: 60px;
   }
 }
 
@@ -304,6 +308,10 @@
     width: 40px;
     height: 40px;
   }
+
+  .main {
+    gap: 40px;
+  }
 }
 
 @media (max-width: 469px) {
@@ -317,6 +325,10 @@
 
   .header h2 {
     text-align: center;
+  }
+
+  .main {
+    gap: 20px;
   }
 }
 

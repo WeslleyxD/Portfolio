@@ -69,3 +69,9 @@
         display: none;
     }
 }
+
+@media (max-width: 469px) {
+    .container h2 {
+      font-size: 1rem;
+    }
+  }

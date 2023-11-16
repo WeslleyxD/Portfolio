@@ -4,7 +4,7 @@ import Brand from '../brand/brand';
 
 export default function CardExp({ href, time, seniority, title, company, brands, description }) {
   return (
-    <Link href={href} target='_blank' className={styles.container} data-aos="fade-up" data-aos-delay="500" >
+    <Link href={href} target='_blank' className={styles.container}>
       <div className={styles.content}>
         <div className={styles.left}>
           {time}
