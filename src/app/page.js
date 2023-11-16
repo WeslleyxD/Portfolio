@@ -30,15 +30,15 @@ export default function App() {
 
   const handleScroll = useCallback(() => {
     if (aboutRef.current != null && tecnologiesRef.current != null && experiencesRef.current != null && projectsRef.current != null) {
-      const windowTop = window.scrollY + 100
-      const windowBot = window.scrollX + 100
+      const windowTop = window.scrollY + 200
+      const windowBot = window.scrollX
 
       const aboutPositionBottom = aboutRef.current.offsetTop + aboutRef.current.offsetHeight
       const tecnologiesPositionBottom = tecnologiesRef.current.offsetTop + tecnologiesRef.current.offsetHeight
       const experiencesPositionBottom = experiencesRef.current.offsetTop + experiencesRef.current.offsetHeight
-      const certifiedsPositionBottom = certifiedsRef.current.offsetTop
+      const certifiedsPositionBottom = certifiedsRef.current.offsetTop + certifiedsRef.current.offsetHeight
 
-      const projectsPositionBottom = projectsRef.current.offsetTop + projectsRef.current.offsetHeight
+      const projectsPositionTop = projectsRef.current.offsetTop
 
       let menuActive = "";
       if (aboutPositionBottom > windowTop) {
@@ -49,9 +49,11 @@ export default function App() {
         menuActive = "EXPERIÊNCIAS";
       } else if (certifiedsPositionBottom > windowTop) {
         menuActive = "CERTIFICADOS";
-      } else if (projectsPositionBottom > windowBot) {
+      } else if (projectsPositionTop > (windowTop + 1000)) {
         menuActive = "PROJETOS";
+        console.log("aqui");
       } else {
+        console.log("ali");
         menuActive = "PROJETOS";
       }
 
