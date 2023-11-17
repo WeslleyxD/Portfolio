@@ -12,9 +12,10 @@ export default function Brand({ name }) {
       "back-end": 1,
       "full-stack": 2,
       "front-end": 3,
-      "javascript": 4,
-      "python": 5,
-      "golang": 6,
+      "aws": 4,
+      "javascript": 5,
+      "python": 6,
+      "golang": 7,
     };
   
     const sortedArray = [...name].sort((a, b) => (order[a] || Number.MAX_SAFE_INTEGER) - (order[b] || Number.MAX_SAFE_INTEGER));
