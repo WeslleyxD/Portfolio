@@ -241,6 +241,7 @@
   display: flex;
   gap: 5px;
   align-items: center;
+  width: fit-content;
 }
 
 .archives svg {
