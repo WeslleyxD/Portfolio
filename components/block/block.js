@@ -107,19 +107,17 @@ const Block = ({ currentblock }) => {
                   <div className={styles.left}>
                     <h2>{item.name} </h2>
                     <div className={styles.video}>
-                      {videoUrl &&
-                        videoUrl[index] &&
+                      {videoUrl[index].videoUrl && (
                         videoUrl[index].videoUrl.includes("mp4") ? (
-                        <video controls style={{ width: '100%' }}>
-                          <source src={videoUrl[index].videoUrl} type="video/mp4" />
-                          Seu navegador não suporta o elemento de vídeo.
-                        </video>
-                      ) :
-                        <Link href={videoUrl[index].videoUrl} target='_blank'>
-                          <img src={videoUrl[index].videoUrl} alt="Imagem" target="_blank" style={{ width: '100%' }} />
-                        </Link>
-                      }
-
+                          <video controls style={{ width: '100%' }}>
+                            <source src={videoUrl[index].videoUrl} type="video/mp4" />
+                            Seu navegador não suporta o elemento de vídeo.
+                          </video>
+                        ) :
+                          <Link href={videoUrl[index].videoUrl} target='_blank'>
+                            <img src={videoUrl[index].videoUrl} alt="Imagem" target="_blank" style={{ width: '100%' }} />
+                          </Link>
+                      )}
                     </div>
                     <div className={styles.urls}>
                       <div className={styles.row}>
