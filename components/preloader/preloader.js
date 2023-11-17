@@ -1,7 +1,4 @@
-'use client';
-
 import styles from './preloader.module.css'
-import React, { useState, useRef } from 'react';
 
 
 export default function PreLoader( { onChange } ) {
