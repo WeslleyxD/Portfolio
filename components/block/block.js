@@ -115,7 +115,7 @@ const Block = ({ currentblock }) => {
                           </video>
                         ) :
                           <Link href={videoUrl[index].videoUrl} target='_blank'>
-                            <img src={videoUrl[index].videoUrl} alt="Imagem" target="_blank" style={{ width: '100%' }} />
+                            <img src={videoUrl[index].videoUrl} alt="Imagem" target="_blank" style={{ width: '100%' , flex:"1", alignItems: "center"}} />
                           </Link>
                       )}
                     </div>

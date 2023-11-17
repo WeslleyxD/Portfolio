@@ -48,14 +48,27 @@
     margin-top: 10px;
     width: 100%;
     align-items: center;
+    gap: 100px;
+}
+
+.left h2 {
+    flex: 1;
+    text-align: center;
+    align-items: center;
 }
 
 .video {
     width: 12rem;
+    flex: 1;
+    text-align: center;
+    align-items: center;
 }
 
 .video img {
     cursor: pointer;
+    flex: 1;
+    text-align: center;
+    align-items: center;
 }
 
 .right h4 {
@@ -79,6 +92,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
+    flex: 1;
+    align-items: center;
+    text-align: center;
 }
 
 .urls svg {
@@ -107,4 +123,33 @@
     100% {
         transform: rotate(360deg);
     }
-} 
+}
+
+@media (max-width: 1024px) {
+    /* font-size: 2.25rem */
+    .left {
+      gap: 1rem;
+    }
+
+    .left h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .left {
+        gap: 0.7rem;
+    }
+    .left h2 {
+      font-size: 1rem;
+    }
+}
+
+@media (max-width: 469px) {
+    .left {
+        gap: 0.4rem;
+    }
+    .left h2 {
+      font-size: 0.8rem;
+    }
+  }
