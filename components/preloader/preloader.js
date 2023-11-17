@@ -1,6 +1,5 @@
 import styles from './preloader.module.css'
 
-
 export default function PreLoader( { onChange } ) {
 
   return (
@@ -12,4 +11,3 @@ export default function PreLoader( { onChange } ) {
     </div>
   );
 }
-

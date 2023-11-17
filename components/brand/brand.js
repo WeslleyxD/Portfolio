@@ -6,20 +6,22 @@ export default function Brand({ name }) {
     return str[0].toUpperCase() + str.slice(1);
   };
 
-  const compareSkills = (a, b) => {
-    const order = ["full-stack", "back-end", "front-end"];
-  
-    if (order.includes(a)) return -1;
-    if (order.includes(b)) return 1;
-    return 0;
+  const order = {
+    "back-end": 1,
+    "full-stack": 2,
+    "front-end": 3,
+    "javascript": 4,
+    "python": 5,
+    "golang": 6,
   };
 
-  if (Array.isArray(name)) {
+  const sortedArray = [...name].sort((a, b) => (order[a] || Number.MAX_SAFE_INTEGER) - (order[b] || Number.MAX_SAFE_INTEGER));
+
+  if (Array.isArray(sortedArray)) {
     // Se name for um array, renderiza uma lista de spans
     return (
       <>
-        {name
-          .sort(compareSkills)
+        {sortedArray
           .map((item, index) => (
             <span key={index} className={styles.brand}>
               {formatString(item)}
