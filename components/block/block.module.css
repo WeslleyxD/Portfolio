@@ -15,6 +15,13 @@
     animation: rotation 1s linear infinite;
 }
 
+.loading {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container h2 {
     font-size: 1.2rem;
 }

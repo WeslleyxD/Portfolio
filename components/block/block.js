@@ -93,7 +93,7 @@ const Block = ({ currentblock }) => {
   return (
     <>
       {loading ? (
-        <div style={{ textAlign: 'center', padding: '20px' }}>
+        <div className={styles.loading}>
           <div className={styles.loader}></div>
         </div>
       ) : (

@@ -42,9 +42,9 @@ export default function App() {
         menuActive = "TECNOLOGIAS";
       } else if (experiencesPositionBottom > windowTop) {
         menuActive = "EXPERIÊNCIAS";
-      } else if (certifiedsPositionBottom > windowTop) {
+      } else if (certifiedsPositionBottom > (windowTop + (window.innerHeight/2.5))) {
         menuActive = "CERTIFICADOS";
-      } else if (projectsPositionTop > (windowTop + 1000)) {
+      } else if (projectsPositionTop > (windowBot + 500)) {
         menuActive = "PROJETOS";
       } else {
         menuActive = "PROJETOS";
