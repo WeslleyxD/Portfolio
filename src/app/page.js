@@ -218,6 +218,10 @@ export default function App() {
                     <Image src="/iam.svg" alt="apprunner" width="64" height="64" title="Identity and Access Management" />
                     <h6>Identity and Access Management(IAM)</h6>
                   </div>
+                  <div className={styles.icon}>
+                    <Image src="/cognito.svg" alt="apprunner" width="64" height="64" title="Cognito" />
+                    <h6>Cognito</h6>
+                  </div>
                 </div>
               </div>
               <div ref={experiencesRef} id="experiences" className={styles.experiences} data-aos="fade-up" data-aos-delay="400">
