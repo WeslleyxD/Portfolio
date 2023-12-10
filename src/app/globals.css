@@ -68,7 +68,7 @@ img {
 
 section {
   margin: 0 auto;
-  width: 75%;
+  width: 60%;
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

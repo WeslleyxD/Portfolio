@@ -18,10 +18,6 @@
 }
 
 
-.kaka {
-  background-color: red;
-}
-
 .description {
   display: inherit;
   justify-content: inherit;
@@ -138,7 +134,7 @@
   margin-right: 8px;
 }
 
-.options {
+.options ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -156,6 +152,10 @@
   gap: 20px;
 }
 
+.links svg {
+  fill: var(--main);
+}
+
 /* @keyframes animation {
   0% {opacity: 0; width: 0%;}
   100% {opacity: 1; width: 100%;}
@@ -170,7 +170,7 @@
   padding: 6rem 0px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 30vh;
 }
 
 .main p {
@@ -193,9 +193,9 @@
   gap: 20px;
 }
 
-.technologies img {
+/* .technologies img {
   margin: 0px 5px;
-}
+} */
 
 .main .active {
   background-color: red;
@@ -255,6 +255,21 @@
 
 .images {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  max-width: 64px;
+}
+
+.icon h6 {
+  color: var(--main);
+  word-wrap: break-word;
 }
 
 
@@ -306,10 +321,10 @@
     height: 25px;
   }
 
-  .technologies img {
+/*   .technologies img {
     width: 40px;
     height: 40px;
-  }
+  } */
 
   .main {
     gap: 40px;
