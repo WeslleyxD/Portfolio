@@ -1,0 +1,76 @@
+.container {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content button {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.openArrow {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.closeArrow {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.openAccordion {
+    max-height: 100vh;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.closeAccordion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.checkbox h4 {
+    font-size: .875rem;
+    color: var(--paragraph);
+    line-height: 1.353;
+    letter-spacing: 1.1px;
+    font-weight: normal;
+}
+
+
+
+
+/* @media (max-width: 800px) {
+    .left {
+        display: none;
+    }
+}
+
+@media (max-width: 469px) {
+    .container h2 {
+      font-size: 1rem;
+    }
+  } */
