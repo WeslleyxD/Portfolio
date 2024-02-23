@@ -5,8 +5,29 @@
 }
 
 .content {
-  width: 1280px;
+  width: 1600px;
   padding: 0px 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0px;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.leftContent {
+  flex: 1;
+}
+
+.rightContent {
+  flex: 6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .return {
@@ -36,6 +57,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 5px;
+}
+
+.brandProjects {
+  flex: 1;
+  width: 300px;
+
 }
 
 @media (max-width: 1174px) {

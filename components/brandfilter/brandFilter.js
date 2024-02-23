@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import styles from './brandfilter.module.css'
 
-export default function Accordion({ data }) {
+export default function Accordion({ input, data }) {
   const [isOpen, setIsOpen] = useState(true);
   const [isChecked, setIsChecked] = useState(false);
 
@@ -12,6 +12,7 @@ export default function Accordion({ data }) {
   };
 
   const handleCheckboxChange = (e) => {
+    input(e);
     setIsChecked(!isChecked);
   };
 

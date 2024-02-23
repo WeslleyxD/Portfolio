@@ -1,0 +1,21 @@
+.card {
+    width: 20rem;
+    height: 20rem;
+    color: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid var(--paragraph);
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.card .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    word-wrap: break-word;
+}
