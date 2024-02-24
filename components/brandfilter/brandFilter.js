@@ -40,9 +40,8 @@ export default function Accordion({ data }) {
   useEffect(() => {
     const clickCheck = checkBoxesClicados.map(item => item.toLowerCase());
     if (clickCheck.length > 0) {
-      router.push(`${pathname}?search=${clickCheck.join('+')}`, { scroll: false });
+      router.push(`${pathname}?search=${clickCheck.join('%')}`, { scroll: false });
     } else {
-      console.log(50050)
       router.push(`${pathname}`, { scroll: false });
     }
 
