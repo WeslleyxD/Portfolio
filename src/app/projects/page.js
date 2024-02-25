@@ -163,10 +163,6 @@ export default function Projects() {
     };
     // 
 
-    console.log("currentItems")
-    console.log(currentItems)
-
-
     return (
         <>
             <div className={styles.container}>

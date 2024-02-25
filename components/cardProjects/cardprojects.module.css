@@ -1,11 +1,29 @@
 .card {
     width: 20rem;
     height: 20rem;
-    color: #fff;
     transition: 0.5s;
     cursor: pointer;
-    border: 1px solid var(--paragraph);
-    border-radius: 5px;
+    padding: 8px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, var(--green), var(--paragraph)); /* Gradiente de cor */
+    border-image-slice: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    cursor: pointer;
+}
+
+.card h4 {
+    color: var(--paragraph);
+    font-size: .875rem;
+    line-height: 1.353;
+    letter-spacing: 1.1px;
+    font-weight: normal;
 }
 
 .card:hover {
@@ -13,9 +31,6 @@
 }
 
 .card .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: 800;
     word-wrap: break-word;
 }
