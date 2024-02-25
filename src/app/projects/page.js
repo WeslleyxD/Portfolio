@@ -37,7 +37,7 @@ async function getAllProjects() {
 export default function Projects() {
     const searchParams = useSearchParams();
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false)
+    const [pageFilter, setPageFilter] = useState(false)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -54,8 +54,11 @@ export default function Projects() {
         };
 
         fetchData();
-        setLoading(true)
     }, []);
+
+    const handlePageFilter = (active) => {
+        setPageFilter(!active);
+    };
 
 
     // Filter Side
@@ -178,32 +181,49 @@ export default function Projects() {
                     <div className={styles.body}>
                         <div className={styles.leftContent}>
                             <div>
-                                <Brandfilter data={[dataBackEnd, dataFrontEnd, dataAws]} />
+                                <Brandfilter dropPage={false} data={[dataBackEnd, dataFrontEnd, dataAws]} />
                             </div>
                         </div>
                         <div className={styles.rightContent}>
                             <div className={styles.rightPagination}>
-                                <div className={styles.pagination}>
-                                    <button disabled={!hasPreviousPage} onClick={() => handlePageChange(currentPage - 1)}>
-                                        <p>Previous</p>
-                                    </button>
+                                <div className={styles.pageFilter}>
+                                    <div className={styles.pagination}>
+                                        <button disabled={!hasPreviousPage} onClick={() => handlePageChange(currentPage - 1)}>
+                                            <p>Previous</p>
+                                        </button>
 
-                                    <span> {currentPage} </span>
+                                        <span> {currentPage} </span>
 
-                                    <button disabled={!hasNextPage} onClick={() => handlePageChange(currentPage + 1)}>
-                                        <p>Next</p>
-                                    </button>
+                                        <button disabled={!hasNextPage} onClick={() => handlePageChange(currentPage + 1)}>
+                                            <p>Next</p>
+                                        </button>
+                                    </div>
+                                    <div className={styles.filterContent}>
+                                        <button onClick={() => handlePageFilter(pageFilter)}>
+                                            <p>Filtros</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z" />
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.rightBody}>
-                                {currentItems.map((item, index) => (
-                                    <div key={index} className={styles.projectContent}>
-                                        <CardProjects data={item} />
-                                    </div>
-                                ))}
+                                {!pageFilter &&
+                                    currentItems.map((item, index) => (
+                                        <div key={index} className={styles.projectContent}>
+                                            <CardProjects data={item} />
+                                        </div>
+                                    ))}
                             </div>
                         </div>
                     </div>
+                    {pageFilter &&
+                        <div className={styles.dropPageFilter}>
+                            <div>header</div>
+                            <Brandfilter dropPage={true} data={[dataBackEnd, dataFrontEnd, dataAws]} />
+                        </div>
+                    }
+
                 </div>
             </div>
         </>

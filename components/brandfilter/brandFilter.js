@@ -1,13 +1,15 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import styles from './brandfilter.module.css'
 
-export default function Accordion({ data }) {
+export default function Accordion({ dropPage, data }) {
   const router = useRouter()
   const pathname = usePathname()
+  const searchParams = useSearchParams()
 
   const [divsClicadas, setDivsClicadas] = useState([]);
   const [checkBoxesClicados, setCheckBoxesClicados] = useState([]);
@@ -37,6 +39,10 @@ export default function Accordion({ data }) {
     });
   };
 
+  const handleCheckboxChecked = (e) => {
+    const searchArray = searchParams.get("search").split('%');
+  }
+
   useEffect(() => {
     const clickCheck = checkBoxesClicados.map(item => item.toLowerCase());
     if (clickCheck.length > 0) {
@@ -61,10 +67,10 @@ export default function Accordion({ data }) {
                 <div key={index} className={styles.checkbox}>
                   <input
                     type="checkbox"
-                    id={`checkbox-${item.name}`}
+                    id={dropPage ? `checkbox-${item.name}` : `checkboxdrop-${item.name}`}
                     onChange={() => handleCheckboxChange(item.name)}
-                  />
-                  <label htmlFor={`checkbox-${item.name}`}><h4>{item.name} ({item.count})</h4></label>
+                    />
+                  <label htmlFor={dropPage ? `checkbox-${item.name}` : `checkboxdrop-${item.name}`}><h4>{item.name} ({item.count})</h4></label>
                 </div>
               ))}
             </div>

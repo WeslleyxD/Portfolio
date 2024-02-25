@@ -51,7 +51,13 @@
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    width: 100%;
 }
+
+.checkbox label {
+    width: 100%;
+}
+
 
 .checkbox h4 {
     font-size: .875rem;
