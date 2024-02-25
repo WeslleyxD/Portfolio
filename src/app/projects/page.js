@@ -19,7 +19,7 @@ async function getAllProjects() {
     const token = process.env.GITHUB_TOKEN;
 
     try {
-        const resp = await fetch(`https://api.github.com/search/repositories?q=user:weslleyxd`, {
+        const resp = await fetch(`https://api.github.com/search/repositories?q=user:weslleyxd+is:public`, {
             cache: 'force-cache',
             headers: { Authorization: `Bearer ${token}` }
         });
