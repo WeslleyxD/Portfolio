@@ -51,7 +51,7 @@ export default function Accordion({ data }) {
     <div className={styles.container}>
       <div className={styles.content}>
         {data.map((row, index) => (
-          <div  key={index}>
+          <div key={index}>
             <button className={styles.button} onClick={() => handleClick(index)}>
               <h2>{row.name} ({row.count})</h2>
               <svg className={!divsClicadas.includes(index) ? styles.openArrow : styles.closeArrow} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path></svg>

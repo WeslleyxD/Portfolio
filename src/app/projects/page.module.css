@@ -36,6 +36,10 @@
   gap: 20px;
 }
 
+.projectContent {
+  flex-grow: 2;
+}
+
 .return {
   display: flex;
   align-items: center;
@@ -93,6 +97,21 @@
   .content {
     padding: 0px 4rem;
   }
+
+  .leftContent {
+    flex: 1.5;
+  }
+}
+
+@media (max-width: 1006px) {
+  .leftContent {
+    display: none;
+  }
+
+  .projectContent {
+    flex-grow: 2;
+  }
+  
 }
 
 

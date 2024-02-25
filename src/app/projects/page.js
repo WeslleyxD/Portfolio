@@ -197,7 +197,7 @@ export default function Projects() {
                             </div>
                             <div className={styles.rightBody}>
                                 {currentItems.map((item, index) => (
-                                    <div key={index}>
+                                    <div key={index} className={styles.projectContent}>
                                         <CardProjects data={item} />
                                     </div>
                                 ))}

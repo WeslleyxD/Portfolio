@@ -14,9 +14,11 @@ export default function CardProjects({ data }) {
         <div className={styles.card}>
           <div>
             <Image src={imageError ? fallBackSrc : `/repo/${data.name.toLowerCase()}.png`} alt="error" width="300" height="128" title={data.name} style={{ objectFit: "contain" }} onError={() => setImageError(true)} />
-            <h3>{data.name}</h3>
           </div>
-          <div className={styles.content}><h4>{data.description}</h4></div>
+          <div className={styles.content}>
+            <h3>{data.name}</h3>
+            <h4>{data.description}</h4>
+          </div>
         </div>
       </div >
     </Link>

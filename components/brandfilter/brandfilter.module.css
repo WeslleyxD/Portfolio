@@ -64,14 +64,8 @@
 
 
 
-/* @media (max-width: 800px) {
-    .left {
-        display: none;
+@media (max-width: 1174px) {
+    .button h2 {
+        font-size: 1rem;
     }
 }
-
-@media (max-width: 469px) {
-    .container h2 {
-      font-size: 1rem;
-    }
-  } */
