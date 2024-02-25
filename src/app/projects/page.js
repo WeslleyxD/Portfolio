@@ -125,7 +125,8 @@ export default function Projects() {
             "count": itemsAws.filter(objeto =>
                 objeto.topics.includes("sam")
             ).length
-        }]
+        },
+    ]
     }
     dataAws.count = dataAws.items.reduce((total, item) => total + item.count, 0);
     // 
@@ -219,8 +220,13 @@ export default function Projects() {
                     </div>
                     {pageFilter &&
                         <div className={styles.dropPageFilter}>
-                            <div>header</div>
-                            <Brandfilter dropPage={true} data={[dataBackEnd, dataFrontEnd, dataAws]} />
+                            <div className={styles.header}>
+                                <h2>Filtros</h2>
+                                <h2 onClick={() => handlePageFilter(pageFilter)}>X</h2>
+                            </div>
+                            <div className={styles.body}>
+                                <Brandfilter dropPage={true} data={[dataBackEnd, dataFrontEnd, dataAws]} />
+                            </div>
                         </div>
                     }
 
