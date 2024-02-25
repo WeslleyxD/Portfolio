@@ -37,6 +37,7 @@
   flex-wrap: wrap;
   gap: 20px;
   position: relative;
+  padding-bottom: 50px;
 }
 
 /* .projectContent {
@@ -133,6 +134,10 @@
 
 .dropPageFilter body {
   background-color: aliceblue;
+}
+
+.dropPageFilterNone {
+  display: none;
 }
 
 @media (max-width: 1174px) {

@@ -218,8 +218,7 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                    {pageFilter &&
-                        <div className={styles.dropPageFilter}>
+                        <div className={pageFilter ? styles.dropPageFilter : styles.dropPageFilterNone}>
                             <div className={styles.header}>
                                 <h2>Filtros</h2>
                                 <h2 onClick={() => handlePageFilter(pageFilter)}>X</h2>
@@ -228,7 +227,6 @@ export default function Projects() {
                                 <Brandfilter dropPage={true} data={[dataBackEnd, dataFrontEnd, dataAws]} />
                             </div>
                         </div>
-                    }
 
                 </div>
             </div>
