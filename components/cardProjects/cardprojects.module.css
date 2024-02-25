@@ -26,6 +26,10 @@
     font-weight: normal;
 }
 
+.card h3 {
+    color: var(--green);
+}
+
 .card:hover {
     transform: translateY(-20px);
 }
